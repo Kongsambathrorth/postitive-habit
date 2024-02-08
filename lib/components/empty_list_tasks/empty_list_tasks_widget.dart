@@ -3,9 +3,6 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'empty_list_tasks_model.dart';
 export 'empty_list_tasks_model.dart';
 
@@ -53,7 +50,7 @@ class _EmptyListTasksWidgetState extends State<EmptyListTasksWidget> {
           fit: BoxFit.fitHeight,
         ),
         Padding(
-          padding: EdgeInsetsDirectional.fromSTEB(0.0, 24.0, 0.0, 0.0),
+          padding: const EdgeInsetsDirectional.fromSTEB(0.0, 24.0, 0.0, 0.0),
           child: Row(
             mainAxisSize: MainAxisSize.max,
             mainAxisAlignment: MainAxisAlignment.center,
@@ -67,7 +64,7 @@ class _EmptyListTasksWidgetState extends State<EmptyListTasksWidget> {
           ),
         ),
         Padding(
-          padding: EdgeInsetsDirectional.fromSTEB(12.0, 4.0, 12.0, 0.0),
+          padding: const EdgeInsetsDirectional.fromSTEB(12.0, 4.0, 12.0, 0.0),
           child: Row(
             mainAxisSize: MainAxisSize.max,
             mainAxisAlignment: MainAxisAlignment.center,
@@ -83,18 +80,18 @@ class _EmptyListTasksWidgetState extends State<EmptyListTasksWidget> {
           ),
         ),
         Padding(
-          padding: EdgeInsetsDirectional.fromSTEB(0.0, 12.0, 0.0, 0.0),
+          padding: const EdgeInsetsDirectional.fromSTEB(0.0, 12.0, 0.0, 0.0),
           child: FFButtonWidget(
             onPressed: () async {
               await showModalBottomSheet(
                 isScrollControlled: true,
                 backgroundColor: Colors.transparent,
-                barrierColor: Color(0x230E151B),
+                barrierColor: const Color(0x230E151B),
                 context: context,
                 builder: (context) {
                   return Padding(
                     padding: MediaQuery.viewInsetsOf(context),
-                    child: Container(
+                    child: const SizedBox(
                       height: double.infinity,
                       child: CreateTaskNewWidget(),
                     ),
@@ -106,8 +103,8 @@ class _EmptyListTasksWidgetState extends State<EmptyListTasksWidget> {
             options: FFButtonOptions(
               width: 170.0,
               height: 50.0,
-              padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-              iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+              iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
               color: FlutterFlowTheme.of(context).primary,
               textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                     fontFamily: 'Lexend Deca',
@@ -116,7 +113,7 @@ class _EmptyListTasksWidgetState extends State<EmptyListTasksWidget> {
                     fontWeight: FontWeight.normal,
                   ),
               elevation: 2.0,
-              borderSide: BorderSide(
+              borderSide: const BorderSide(
                 color: Colors.transparent,
                 width: 1.0,
               ),

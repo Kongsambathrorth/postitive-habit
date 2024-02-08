@@ -6,14 +6,10 @@ import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_toggle_icon.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:infinite_scroll_pagination/infinite_scroll_pagination.dart';
-import 'package:provider/provider.dart';
 import 'completed_tasks_model.dart';
 export 'completed_tasks_model.dart';
 
@@ -45,8 +41,8 @@ class _CompletedTasksWidgetState extends State<CompletedTasksWidget>
           curve: Curves.easeInOut,
           delay: 0.ms,
           duration: 600.ms,
-          begin: Offset(0.0, 70.0),
-          end: Offset(0.0, 0.0),
+          begin: const Offset(0.0, 70.0),
+          end: const Offset(0.0, 0.0),
         ),
       ],
     ),
@@ -93,12 +89,12 @@ class _CompletedTasksWidgetState extends State<CompletedTasksWidget>
           showModalBottomSheet(
             isScrollControlled: true,
             backgroundColor: Colors.transparent,
-            barrierColor: Color(0x230E151B),
+            barrierColor: const Color(0x230E151B),
             context: context,
             builder: (context) {
               return Padding(
                 padding: MediaQuery.viewInsetsOf(context),
-                child: Container(
+                child: const SizedBox(
                   height: double.infinity,
                   child: CreateTaskNewWidget(),
                 ),
@@ -124,7 +120,7 @@ class _CompletedTasksWidgetState extends State<CompletedTasksWidget>
                 color: FlutterFlowTheme.of(context).white,
               ),
         ),
-        actions: [],
+        actions: const [],
         centerTitle: false,
         elevation: 0.0,
       ),
@@ -146,7 +142,7 @@ class _CompletedTasksWidgetState extends State<CompletedTasksWidget>
             ),
             Expanded(
               child: Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0.0, 8.0, 0.0, 0.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 8.0, 0.0, 0.0),
                 child:
                     PagedListView<DocumentSnapshot<Object?>?, ToDoListRecord>(
                   pagingController: _model.setListViewController(
@@ -189,14 +185,14 @@ class _CompletedTasksWidgetState extends State<CompletedTasksWidget>
                         ),
                       ),
                     ),
-                    noItemsFoundIndicatorBuilder: (_) => Center(
+                    noItemsFoundIndicatorBuilder: (_) => const Center(
                       child: EmptyListTasksWidget(),
                     ),
                     itemBuilder: (context, _, listViewIndex) {
                       final listViewToDoListRecord = _model
                           .listViewPagingController!.itemList![listViewIndex];
                       return Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(
+                        padding: const EdgeInsetsDirectional.fromSTEB(
                             16.0, 0.0, 16.0, 8.0),
                         child: InkWell(
                           splashColor: Colors.transparent,
@@ -219,7 +215,7 @@ class _CompletedTasksWidgetState extends State<CompletedTasksWidget>
                             decoration: BoxDecoration(
                               color: FlutterFlowTheme.of(context)
                                   .secondaryBackground,
-                              boxShadow: [
+                              boxShadow: const [
                                 BoxShadow(
                                   blurRadius: 5.0,
                                   color: Color(0x230E151B),
@@ -233,7 +229,7 @@ class _CompletedTasksWidgetState extends State<CompletedTasksWidget>
                               children: [
                                 Expanded(
                                   child: Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         16.0, 12.0, 0.0, 12.0),
                                     child: Column(
                                       mainAxisSize: MainAxisSize.max,
@@ -251,7 +247,7 @@ class _CompletedTasksWidgetState extends State<CompletedTasksWidget>
                                           mainAxisSize: MainAxisSize.max,
                                           children: [
                                             Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(0.0, 4.0, 0.0, 0.0),
                                               child: Text(
                                                 dateTimeFormat(
@@ -264,7 +260,7 @@ class _CompletedTasksWidgetState extends State<CompletedTasksWidget>
                                               ),
                                             ),
                                             Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(4.0, 4.0, 0.0, 0.0),
                                               child: Text(
                                                 dateTimeFormat(
@@ -287,7 +283,7 @@ class _CompletedTasksWidgetState extends State<CompletedTasksWidget>
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
                                     Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           0.0, 0.0, 12.0, 0.0),
                                       child: ToggleIcon(
                                         onPressed: () async {
@@ -309,7 +305,7 @@ class _CompletedTasksWidgetState extends State<CompletedTasksWidget>
                                               .primary,
                                           size: 25.0,
                                         ),
-                                        offIcon: Icon(
+                                        offIcon: const Icon(
                                           Icons.radio_button_off,
                                           color: Color(0xFF2B343A),
                                           size: 25.0,
