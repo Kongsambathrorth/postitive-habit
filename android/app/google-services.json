@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "501680742386",
+    "project_id": "positive-habit-p9qj3v",
+    "storage_bucket": "positive-habit-p9qj3v.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:501680742386:android:d641b41bbd78cb7703156b",
+        "android_client_info": {
+          "package_name": "Robin.Do"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA5y5LXsYGgqZfFj6KDY_b2hoIRAuaxEro"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
